@@ -25,8 +25,13 @@ enum IpAddr {
 }
 
 fn main() {
+    let x: i8 = 5;
+    let y: Option<i8> = Some(5);
+    let sum = x + y;
+
     let home = IpAddr::V4(127, 0, 0, 1);
     let loopback = IpAddr::V6(String::from("::1"));
     let m = Message::Write(String::from("Hello"));
+    m.call();
 }
 
